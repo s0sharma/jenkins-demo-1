@@ -1,4 +1,4 @@
-from utils import add, sub, mul
+from utils import add
 
 if __name__ == '__main__':
     a = 12
