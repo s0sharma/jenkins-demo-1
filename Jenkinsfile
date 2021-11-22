@@ -14,8 +14,8 @@ agent any
         }
      stage('run tests') {
             steps {
-		sh "chmod u+x spec.py"
-                sh "python3 spec.py"
+		sh "chmod u+x test.py"
+                sh "python3 test.py"
             }
         }
     } 
