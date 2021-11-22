@@ -3,7 +3,7 @@ agent any
     stages {
         stage('clone the repository') {
             steps {
-                git 'https://github.com/masterchief01/init-jenkins'
+                git 'https://github.com/khufia/jenkins-demo'
             }
         }
         stage('exec main') {
