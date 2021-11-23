@@ -12,7 +12,7 @@ agent any
                 sh "python3 main.py"
             }
         }
-     stage('RUn and Check Tests') {
+     stage('Run and Check Tests') {
             steps {
 		sh "chmod u+x test.py"
                 sh "python3 test.py"
@@ -24,7 +24,7 @@ agent any
           echo 'This will always run'  
       }  
       success {  
-          mail bcc: '', body: "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "ERROR CI: Project name -> ${env.JOB_NAME}", to: "ghazishazanahmad@gmail.com";  
+          mail bcc: '', body: "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "SUCCESS CI: Project name -> ${env.JOB_NAME}", to: "ghazishazanahmad@gmail.com";  
       }  
       failure {  
           mail bcc: '', body: "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "ERROR CI: Project name -> ${env.JOB_NAME}", to: "ghazishazanahmad@gmail.com";  
