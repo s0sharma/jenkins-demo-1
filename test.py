@@ -7,7 +7,7 @@ def tests():
     print("add(1, 2) = ", res, "\nPass")
 
     res = add(2,5)
-    expected = 7
+    expected = 8
     assert res == expected 
     print("add(2, 5) = ", res, "\nPass")
 
