@@ -1,20 +1,17 @@
+#!/usr/bin/python3
+# Test case for adding two numbers
+import unittest
+
 from utils import add
 
-def tests():
-    res = add(1,2)
-    expected = 3
-    assert res == expected 
-    print("add(1, 2) = ", res, "\nPass")
+class TestSum(unittest.TestCase):
+    def test_list_int(self):
+        """
+        Test case to add two numbers
+        """
+        data = [23, 32]
+        result = add(data[0], data[1])
+        self.assertEqual(result, 55)
 
-    res = add(2,5)
-    expected = 8
-    assert res == expected 
-    print("add(2, 5) = ", res, "\nPass")
-
-
-if __name__ == "__main__":
-    try:
-        tests()
-    except Exception as e:
-        print('Errors encountered')
-        print(str(e))
+if __name__ == '__main__':
+    unittest.main()
